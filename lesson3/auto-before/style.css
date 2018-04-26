@@ -1,0 +1,97 @@
+/*.new::after{
+    content:' - Новый';
+    color: red;
+    font-style: italic;
+}
+ul{
+    list-style: none;
+}
+li::before{
+    content:'*';
+    padding-right: 7px;
+    color: red;
+}
+пример 2
+blockquote{
+    background: #f9f0de;
+    border-left: 2px solid #0083ca;
+    padding: 1em;
+}
+blockquote::before,
+blockquote::after{
+    content: '“';
+    color:#c1172c;
+    line-height: 0;/*чтобы ковычки не занимали места
+    }
+blockquote::after {
+    content: "”";
+}
+пример3 хлебные крошки
+.breadcrumbs{
+    margin: 0;
+    padding: 10px;
+    background: #b2d235;
+}
+.breadcrumbs li{
+    display: inline-block;
+}
+.breadcrumbs a{
+    color: #fff;
+    text-decoration: none;
+}
+.breadcrumbs li + li::before/*рабозрать + и ~ {
+    content: '/';
+    padding: 0 7px;
+}
+пример 4
+blockquote{
+    quotes: "«" "»" "„" "“";/*если одна ццитата 1е ковычкиб вложенная - вторые
+}
+blockquote::before{
+    content: open-quote;
+color:red;
+}
+blockquote::after{
+    content: close-quote;
+    color:red;
+}пример 5
+.search{
+    width: 200px;
+    padding: 5px 15px;
+    display: inline-block;
+    border: 1px solid #dc8212;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+[type='search']{
+    border:0; outline: none;
+}
+.zoom{
+    border: none;
+    background: transparent;
+    width: 20px;height: 20px;
+    padding: 0;
+}
+.zoom::before{
+    content: url(zoom.png);
+}
+пример 6*/
+ul{
+    list-style: none;
+}
+li{
+    counter-increment: list;
+    margin-bottom: .2em;
+}
+li::before{
+    content: counter(list);/*для текстов у которых есть большой список*/
+    display: inline-block;
+    width: 1.5em;
+    line-height: 1.5em;
+    background-color: #2a5885;
+    color:#fff;
+    text-align: center;
+    margin-right:  .5em;
+}

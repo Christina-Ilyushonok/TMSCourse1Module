@@ -1,0 +1,39 @@
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: wrap;
+
+}
+div{
+    width: 20%;
+    background-color: aquamarine;
+    padding: 10px;
+    box-sizing: border-box;/*что считать за widht*/
+    font-weight: bolder;
+    font-size: 1em;
+    text-align: center;
+}
+div:nth-child(2n){
+    flex: 1;
+}
+.header{
+    width: 100%;
+}
+.left-bar, .right-bar {
+    width: 150px;
+}
+.content{
+    height: 550px;
+    flex: 1;
+}
+.footer{
+    height: 100%;
+    width: 100%;
+}
